@@ -39,7 +39,8 @@
             android:hint="@string/endereco_de_email"
             android:textColorHint="@color/white"
             android:ems="10"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            android:layout_marginRight="16dp" />
 
         <EditText
             android:id="@+id/edtPasswordLogin"
@@ -52,7 +53,8 @@
             android:hint="@string/senha_de_acesso"
             android:textColorHint="@color/white"
             android:ems="10"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:layout_marginRight="16dp" />
 
         <Button
             android:id="@+id/btnEntrar"
@@ -61,10 +63,11 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
-            android:padding="16dp"
             android:backgroundTint="@color/colorAccent"
+            android:padding="10dp"
             android:text="@string/entrar_app"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white"
+            app:backgroundTint="@color/colorAccent" />
 
         <Button
             android:id="@+id/btnCadastro"
@@ -73,7 +76,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
-            android:padding="16dp"
+            android:padding="10dp"
             android:text="@string/cadastrar_se"
             android:backgroundTint="@color/colorPrimary"
             android:textColor="@color/white"/>
@@ -86,7 +89,7 @@
         android:layout_centerHorizontal="true"
         android:textColor="@color/white"
         android:layout_marginBottom="16dp"
-        android:text="@string/whatsapp_clone_2021"
+        android:text="Whatsapp Clone @2021\nLeh_Lagoo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 </RelativeLayout>

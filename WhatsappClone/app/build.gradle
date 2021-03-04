@@ -3,17 +3,20 @@ plugins {
     id 'kotlin-android'
 }
 
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "com.example.lemori.whatsappclone"
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
-
+        multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -48,10 +51,11 @@ dependencies {
     implementation 'com.google.firebase:firebase-firestore:22.1.1' // FireStore (Banco de Dados em tempo real) - FireBase
     implementation 'com.google.firebase:firebase-messaging:21.0.1' // Notificações e pushs - FireBase
     implementation 'com.squareup.picasso:picasso:2.71828' // Utilidades de imagem - Picasso
+    implementation 'com.android.support:multidex:1.0.3'
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-
-
 }
+
+apply plugin: 'com.google.gms.google-services'

@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Whatsapp Clone</string>
+    <string name="endereco_de_email">Endereço de Email</string>
+    <string name="senha_de_acesso">Senha de Acesso</string>
+    <string name="entrar_app">Entrar</string>
+    <string name="nome_do_usuario">Nome do usuário</string>
+    <string name="cadastro_de_usuario">Cadastro de usuário</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="cadastrar_se">Cadastrar-se</string>
+    <string name="whatsapp_clone_2021">Whatsapp Clone @2021\nLeh_Lagoo</string>
+    <string name="cadastro">Cadastro</string>
+    <string name="verifiquei">Verifiquei</string>
+    <string name="nao_recebi_o_email">Não recebi o e-mail</string>
+    <string name="texto_confirmacao">Verifique seu e-mail para completar o cadastro. Foi enviado um e-mail para o endereço cadastrado com um link de confirmação.</string>
 </resources>
