@@ -7,6 +7,17 @@
     android:background="@color/colorPrimaryDark"
     tools:context=".MainActivity">
 
+    <ProgressBar
+        android:id="@+id/pgLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:indeterminate="true"
+        android:layout_marginTop="-7dp"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentTop="true"
+        android:visibility="invisible"/>
+
     <ImageView
         android:layout_centerInParent="true"
         android:layout_width="match_parent"

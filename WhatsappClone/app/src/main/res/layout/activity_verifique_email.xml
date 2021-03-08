@@ -34,8 +34,7 @@
             android:textColor="@color/white"
             android:textSize="17sp"
             android:textStyle="bold"
-            android:layout_margin="16dp"
-            android:text="leticia@test.com"/>
+            android:layout_margin="16dp" />
 
         <TextView
             android:gravity="center_horizontal"
@@ -48,7 +47,7 @@
             android:text="@string/texto_confirmacao"/>
 
         <Button
-            android:id="@+id/btnVerifique"
+            android:id="@+id/btnVerifiquei"
             android:paddingStart="40dp"
             android:paddingEnd="40dp"
             android:padding="16dp"

@@ -52,6 +52,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-messaging:21.0.1' // Notificações e pushs - FireBase
     implementation 'com.squareup.picasso:picasso:2.71828' // Utilidades de imagem - Picasso
     implementation 'com.android.support:multidex:1.0.3'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'

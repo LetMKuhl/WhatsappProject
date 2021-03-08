@@ -7,7 +7,6 @@ import android.view.View
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_cadastro.*
-import kotlinx.android.synthetic.main.activity_main.*
 
 class CadastroActivity : AppCompatActivity() {
 
@@ -37,7 +36,7 @@ class CadastroActivity : AppCompatActivity() {
             cadastroCarrefagando(true)
 
             auth.createUserWithEmailAndPassword(
-                edtEmailRegister.text.toString(),
+                edtEmailLogin.text.toString(),
                 edtPasswordRegister.text.toString()
             ).addOnCompleteListener { cadastro ->
 
@@ -90,12 +89,12 @@ class CadastroActivity : AppCompatActivity() {
     private fun cadastroCarrefagando(flag: Boolean) {
 
         edtNameRegister.isEnabled = !flag
-        edtEmailRegister.isEnabled = !flag
+        edtEmailLogin.isEnabled = !flag
         edtPasswordRegister.isEnabled = !flag
 
         btnRegister.isEnabled = !flag
 
-        btnRegister.text = if (flag) "Carregando..." else "Cadastrar"
+        btnRegister.text = if (flag) getString(R.string.carregando) else "Cadastrar"
 
         pgCadastro.visibility = if (flag) View.VISIBLE else View.INVISIBLE
 
@@ -119,13 +118,13 @@ class CadastroActivity : AppCompatActivity() {
 
 
 
-        if (edtEmailRegister.text.isBlank() || edtEmailRegister.text.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(
-                edtEmailRegister.text
+        if (edtEmailLogin.text.isBlank() || edtEmailLogin.text.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(
+                edtEmailLogin.text
             ).matches()
         ) {
 
-            edtEmailRegister.error = "Endereço de e-mail incorreto. Digite um e-mail valido."
-            edtEmailRegister.requestFocus()
+            edtEmailLogin.error = "Endereço de e-mail incorreto. Digite um e-mail valido."
+            edtEmailLogin.requestFocus()
             return false
 
         }

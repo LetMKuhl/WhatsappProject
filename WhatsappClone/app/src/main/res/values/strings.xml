@@ -12,4 +12,8 @@
     <string name="verifiquei">Verifiquei</string>
     <string name="nao_recebi_o_email">Não recebi o e-mail</string>
     <string name="texto_confirmacao">Verifique seu e-mail para completar o cadastro. Foi enviado um e-mail para o endereço cadastrado com um link de confirmação.</string>
+    <string name="carregando">Carregando...</string>
+    <string name="title_activity_inicio">InicioActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
 </resources>
