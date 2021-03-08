@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0.13"
+        android:src="@drawable/hero"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:layout_width="360dp"
+            android:adjustViewBounds="true"
+            android:layout_marginBottom="40dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/whats_logo"/>
+
+        <EditText
+            android:id="@+id/edEmailLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/white"
+            android:hint="@string/endereco_de_email"
+            android:textColorHint="@color/white"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:layout_marginRight="16dp" />
+
+        <EditText
+            android:id="@+id/edtPasswordLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="18dp"
+            android:textColor="@color/white"
+            android:hint="@string/senha_de_acesso"
+            android:textColorHint="@color/white"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:layout_marginRight="16dp" />
+
+        <Button
+            android:id="@+id/btnEntrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/colorAccent"
+            android:padding="10dp"
+            android:text="@string/entrar_app"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/colorAccent" />
+
+        <Button
+            android:id="@+id/btnCadastro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:padding="10dp"
+            android:text="@string/cadastrar_se"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:layout_marginBottom="16dp"
+        android:text="Whatsapp Clone @2021\nLeh_Lagoo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>
