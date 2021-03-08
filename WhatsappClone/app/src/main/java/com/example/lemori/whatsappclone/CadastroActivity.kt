@@ -82,7 +82,9 @@ class CadastroActivity : AppCompatActivity() {
     }
 
     private fun sucessoCadastro() {
+
         abreMainActivity()
+
     }
 
     private fun cadastroCarrefagando(flag: Boolean) {
