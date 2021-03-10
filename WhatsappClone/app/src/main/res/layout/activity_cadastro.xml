@@ -8,13 +8,16 @@
     android:orientation="vertical"
     tools:context=".CadastroActivity">
 
-    <Toolbar
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbCadastro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tbCadastro"
-        android:title="@string/cadastro"
+        android:layout_marginBottom="16dp"
         android:background="@color/colorPrimary"
-        android:theme="?attr/actionBarTheme"/>
+        android:minHeight="?attr/actionBarSize"
+        app:navigationIcon="@drawable/seta_esquerda"
+        android:theme="?attr/actionBarTheme"
+        app:title="@string/cadastro"/>
 
     <ProgressBar
         android:id="@+id/pgCadastro"

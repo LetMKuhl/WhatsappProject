@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.example.lemori.whatsappclone.utils.Constanst
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_cadastro.*
 
 class CadastroActivity : AppCompatActivity() {
@@ -33,7 +35,7 @@ class CadastroActivity : AppCompatActivity() {
 
         if (validacaoCadastro()) {
 
-            cadastroCarrefagando(true)
+            cadastroCarregando(true)
 
             auth.createUserWithEmailAndPassword(
                 edtEmailLogin.text.toString(),
@@ -46,6 +48,32 @@ class CadastroActivity : AppCompatActivity() {
 
                         if (cadastro.isSuccessful) {
 
+                            val db = FirebaseFirestore.getInstance()
+
+                            val usuario = hashMapOf<String, String>(
+                                "foto" to Constanst.URL_DEFAULT_PROFILE_PHOTO,
+                                "nome" to edtNameRegister.text.toString(),
+                                "email" to auth.currentUser!!.email
+                            )
+
+                            db.collection("usuarios")
+                                .document(auth.currentUser!!.uid)
+                                .set(usuario)
+                                .addOnSuccessListener {
+
+                                    sucessoCadastro()
+
+                                }.addOnFailureListener{
+
+                                    auth.currentUser!!.delete().addOnCompleteListener{
+
+                                        erroCadastro(envioEmail.exception?.message!!)
+                                        cadastroCarregando(false)
+
+                                    }
+
+                                }
+
                             sucessoCadastro()
 
                         } else {
@@ -54,7 +82,7 @@ class CadastroActivity : AppCompatActivity() {
 
                                 erroCadastro(envioEmail.exception?.message!!)
 
-                                cadastroCarrefagando(false)
+                                cadastroCarregando(false)
 
                             }
 
@@ -66,7 +94,7 @@ class CadastroActivity : AppCompatActivity() {
 
                     erroCadastro("Falha ao realizar a operação. Motivo : ${cadastro.exception?.message}")
 
-                    cadastroCarrefagando(false)
+                    cadastroCarregando(false)
 
                 }
 
@@ -86,7 +114,7 @@ class CadastroActivity : AppCompatActivity() {
 
     }
 
-    private fun cadastroCarrefagando(flag: Boolean) {
+    private fun cadastroCarregando(flag: Boolean) {
 
         edtNameRegister.isEnabled = !flag
         edtEmailLogin.isEnabled = !flag
